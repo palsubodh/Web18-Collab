@@ -1,0 +1,32 @@
+
+
+body{
+    margin: 0 100px;
+}
+#nav{
+    height: 70px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(215, 206, 224);
+}
+#nav>div{
+    height: inherit;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-color: blueviolet;
+    color: aqua;
+}
+a{
+    text-decoration: none;
+}
+#parent{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    
+}
