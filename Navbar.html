@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="commnStyle.css">
+</head>
+<body>
+    <div id="nav">
+        <div><a>men</a></div>
+        <div><a>womens</a></div>
+        <div><a>sign up</a></div>
+        <div><a>log in</a></div>
+    </div>
+    <h1>first page</h1>
+</body>
+</html>
+<script>
+    document.querySelectorAll("#nav>div")[0].addEventListener("click",menP);
+    document.querySelectorAll("#nav>div")[1].addEventListener("click",womenP);
+    document.querySelectorAll("#nav>div")[2].addEventListener("click",signP);
+    document.querySelectorAll("#nav>div")[3].addEventListener("click",logP);
+
+    function signP(){
+       
+            window.location.href="signUp.html";
+    }
+
+    function menP(){
+       var logD=JSON.parse(localStorage.getItem("loginData"));
+        if(logD!=null){
+            window.location.href="mens.html";
+        }else{
+            signP();
+        }
+    }
+    function logP(){
+        window.location.href="logIn.html";
+    }
+    function womenP(){
+        var logD=JSON.parse(localStorage.getItem("loginData"));
+        if(logD!=null){
+            window.location.href="womens.html";
+        }else{
+            signP();
+        }
+    }
+
+</script>
